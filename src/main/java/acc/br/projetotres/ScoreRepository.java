@@ -1,4 +1,7 @@
 package acc.br.projetotres;
 
-public class ScoreRepository {
+import org.springframework.data.repository.CrudRepository;
+
+public interface ScoreRepository extends CrudRepository <Score, Integer> {
+
 }

@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <title>Resultado do Jogo</title>
 </head>
 <body>
-$END$
+<h1>Resultado</h1>
+<p>Você escolheu: <span th:text="${aEscolha}"></span></p>
+<p>O resultado de sua escolha foi: <span th:text="${saida}"></span></p>
+<p>Vitórias: <span th:text="${#numbers.formatInteger(score.vitorias)}"></span></p>
+<p>Derrotas: <span th:text="${#numbers.formatInteger(score.derrotas)}"></span></p>
+<p>Empates: <span th:text="${#numbers.formatInteger(score.empates)}"></span></p>
+<span th:text="${score != null ? #numbers.formatInteger(score.vitorias) : 'N/A'}"></span>
+
+
+<a href="/zerarScore">Zerar Pontuação</a><br>
+<a href="/">Voltar à página inicial</a>
 </body>
 </html>

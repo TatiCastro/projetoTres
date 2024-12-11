@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <title>Jogo Pedra, Papel e Tesoura</title>
 </head>
 <body>
-$END$
+<h1>Escolha sua jogada</h1>
+<form action="/teste" method="get">
+    <button type="submit" name="escolha" value="pedra">Pedra</button>
+    <button type="submit" name="escolha" value="papel">Papel</button>
+    <button type="submit" name="escolha" value="tesoura">Tesoura</button>
+</form>
 </body>
 </html>
